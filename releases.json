@@ -1,0 +1,18 @@
+[
+    {
+        "releases":"https://api.github.com/repos/v2ray/v2ray-core/releases",
+        "saveToPath":"v2ray/v2ray-core"
+    },
+    {
+        "releases":"https://api.github.com/repos/p4gefau1t/trojan-go/releases",
+        "saveToPath":"p4gefau1t/trojan-go"
+    },
+    {
+        "releases":"https://api.github.com/repos/xtaci/kcptun/releases",
+        "saveToPath":"xtaci/kcptun"
+    },
+    {
+        "releases":"https://api.github.com/repos/Anankke/SSPanel-Uim/releases",
+        "saveToPath":"Anankke/SSPanel-Uim"
+    }
+]

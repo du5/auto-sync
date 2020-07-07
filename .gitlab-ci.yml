@@ -1,0 +1,32 @@
+image: centos:7
+
+stages:
+  - sync
+
+before_script:
+    - yum -y install epel-release
+    - yum -y install jq openssh-server openssh-clients ntp
+    - rm -rf /etc/localtime
+    - mkdir -p ~/.ssh
+    - \cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+    - \cp ${CI_SSH_PEM} /root/ssh.pem
+    - \cp ${CI_SSH_CONF} ~/.ssh/known_hosts
+    - \cp ${CI_SSH_ETC_CONF} /etc/ssh/ssh_config
+    - chmod 600 /root/ssh.pem
+    - chmod 644 ~/.ssh/known_hosts
+    - eval $(ssh-agent)
+    - ssh-add /root/ssh.pem
+
+git:
+  stage: sync
+  script:
+    - yum -y install git
+    # 理论上可以在把全部数据放在一个 josn
+    - bash sync.bash git gitlab-to-github
+    - bash sync.bash git github-to-gitlab
+
+releases:
+  stage: sync
+  script:
+    - yum -y install curl wget
+    - bash sync.bash releases

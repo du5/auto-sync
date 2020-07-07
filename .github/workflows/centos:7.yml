@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: centos:7
+    steps:
+    - uses: actions/checkout@v2
+    - name: auto sync
+      env:
+        CI_SSH_IP: ${{secrets.CI_SSH_IP}}
+        CI_SSH_CONF: ${{secrets.CI_SSH_CONF}}
+        CI_SSH_PORT: ${{secrets.CI_SSH_PORT}}
+        CI_SSH_PEM: ${{secrets.CI_SSH_PEM}}
+        CI_SSH_ETC_CONF: ${{secrets.CI_SSH_ETC_CONF}}
+      run: |
+        # before script
+        yum -y install epel-release
+        yum -y install jq openssh-server openssh-clients ntp
+        rm -rf /etc/localtime
+        mkdir -p ~/.ssh
+        echo "${CI_SSH_PEM}" > ~/ssh.pem
+        echo "${CI_SSH_CONF}" > ~/.ssh/known_hosts
+        echo "${CI_SSH_ETC_CONF}" > /etc/ssh/ssh_config
+        \cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        chmod 600 ~/ssh.pem
+        chmod 644 ~/.ssh/known_hosts
+        eval $(ssh-agent)
+        ssh-add ~/ssh.pem
+        # sync git
+        yum -y install git
+        bash sync.bash git gitlab-to-github
+        bash sync.bash git github-to-gitlab
+        # sync releases
+        yum -y install curl wget
+        bash sync.bash releases
