@@ -43,5 +43,14 @@
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
+    },
+    {
+        "source":"git@github.com:DivineEngine/Profiles.git",
+        "pull_user":"du5",
+        "pull_email":"54979375+du5@users.noreply.github.com",
+        "to":"git@ssh.git.bet:elrepo/profiles.git",
+        "push_user":"elrepo",
+        "push_email":"54979375+du5@users.noreply.github.com",
+        "push_args":""
     }
 ]
