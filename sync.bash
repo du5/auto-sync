@@ -20,11 +20,9 @@ function syncGit
         git config --global user.name ${pull_user}
         git config --global user.email ${pull_email}
         ssh -T `echo ${source} |awk -F: '{print $1}' `
-        git clone ${source} repository
+        git clone --bare ${source} repository
         (
             cd repository
-            git fetch --all
-            git fetch --tags
             git remote set-url origin ${to}
             git config --global user.name ${push_user}
             git config --global user.email ${push_email}
