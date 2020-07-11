@@ -17,6 +17,7 @@ function syncGit
         push_user="`getArgs \".[${i}].push_user\"`"
         push_email="`getArgs \".[${i}].push_email\"`"
         push_args="`getArgs \".[${i}].push_args\"`"
+
         git config --global user.name ${pull_user}
         git config --global user.email ${pull_email}
         ssh -T `echo ${source} |awk -F: '{print $1}' `
@@ -70,6 +71,7 @@ function syncReleases
         ssh root@${CI_SSH_IP} -p ${CI_SSH_PORT} "mkdir -p /www/wwwroot/build.git.bet/`jq -r \".[${i}].saveToPath\" ../releases.json`/"
         scp -P${CI_SSH_PORT} -q * root@${CI_SSH_IP}:/www/wwwroot/build.git.bet/`jq -r ".[${i}].saveToPath" ../releases.json`/
         cd ..
+
         rm -rf releases
     done
 }
