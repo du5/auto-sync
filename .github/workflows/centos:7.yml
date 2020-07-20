@@ -41,5 +41,5 @@ jobs:
         bash sync.bash git gitlab-to-github
         bash sync.bash git github-to-gitlab
         # sync releases
-        yum -y install curl wget
-        bash sync.bash releases
+        # yum -y install curl wget
+        # bash sync.bash releases
