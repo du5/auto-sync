@@ -3,7 +3,7 @@
         "source":"git@github.com:Anankke/SSPanel-Uim.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/SSPanel-Uim.git",
+        "to":"git@ssh2.git.bet:elrepo/SSPanel-Uim.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
@@ -12,7 +12,7 @@
         "source":"git@github.com:xtaci/kcptun.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/kcptun.git",
+        "to":"git@ssh2.git.bet:elrepo/kcptun.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
@@ -21,7 +21,7 @@
         "source":"git@github.com:trojan-gfw/trojan.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/trojan.git",
+        "to":"git@ssh2.git.bet:elrepo/trojan.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
@@ -30,7 +30,7 @@
         "source":"git@github.com:p4gefau1t/trojan-go.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/trojan-go.git",
+        "to":"git@ssh2.git.bet:elrepo/trojan-go.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
@@ -39,7 +39,7 @@
         "source":"git@github.com:v2ray/v2ray-core.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/v2ray-core.git",
+        "to":"git@ssh2.git.bet:elrepo/v2ray-core.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""
@@ -48,7 +48,7 @@
         "source":"git@github.com:DivineEngine/Profiles.git",
         "pull_user":"du5",
         "pull_email":"54979375+du5@users.noreply.github.com",
-        "to":"git@ssh.git.bet:elrepo/profiles.git",
+        "to":"git@ssh2.git.bet:elrepo/Profiles.git",
         "push_user":"elrepo",
         "push_email":"54979375+du5@users.noreply.github.com",
         "push_args":""

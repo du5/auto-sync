@@ -1,6 +1,6 @@
 [
     {
-        "source":"git@ssh.git.bet:elrepo/ADNM-Bot.git",
+        "source":"git@ssh2.git.bet:elrepo/ADNM-Bot.git",
         "pull_user":"elrepo",
         "pull_email":"54979375+du5@users.noreply.github.com",
         "to":"git@github.com:du5/ADNM-Bot.git",
@@ -9,7 +9,7 @@
         "push_args":""
     },
     {
-        "source":"git@ssh.git.bet:elrepo/auto-sync.git",
+        "source":"git@ssh2.git.bet:elrepo/auto-sync.git",
         "pull_user":"elrepo",
         "pull_email":"54979375+du5@users.noreply.github.com",
         "to":"git@github.com:du5/auto-sync.git",
